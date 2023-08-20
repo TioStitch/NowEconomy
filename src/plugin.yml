@@ -1,0 +1,12 @@
+name: NowEconomy
+version: 1.0
+main: de.tiostitch.economy.Main
+description: Um sistema completo de economia.
+depend: [Vault]
+economy:
+  default: true
+  provider: Vault
+commands:
+  money:
+    aliases: [ME, MEconomy, Economy]
+    permission: "Economy.Manager"
