@@ -1,0 +1,100 @@
+#Permissões lista:
+#'Economy.Manager' - Permite usar /money,
+#mas os outros precisam de outras permissões.
+
+settings:
+  #EXTRA: Coisas pedidas foram
+  #adicionadas e testadas.
+  money-top-runnable: 600 #O magnata é setado neste tempo.
+  second-top-runnable: 600 #O top 2 é setado aqui.
+  third-top-runnable: 600 #O top 3 é setado aqui.
+
+  #Raga tangaaaaaa acereee reeee
+  coinsAddMessage: true #Faz o jogador receber a mensagem dos seus coins adicionadas.
+  coinsRemoveMessage: true #Faz o jogador receber a mensagem dos seus coins removidas.
+  coinsSetMessage: true #Faz o jogador receber a mensagem dos seus coins setadas.
+
+  #CONVERSOR: %CoinMsg%
+  #Singular - 1 coin.
+  #Plural - 2 coins.
+  coins-singular: "Coin"
+  coins-plural: "Coins"
+
+  #MYSQL -> Salva em uma database MYSQL.
+  #YAML -> Salva em arquivos yml.
+  file-process: #Tipos: MYSQL, YAML
+    method: MYSQL
+
+  magnata: "§5[Magnata] "
+
+  MySQL:
+    host: yourHost
+    database: yourDatabase
+    username: yourUsername
+    password: yourPassWord
+
+  formatter-toggle: true #Troque as %coins% por %formattedcoins%
+  formats:
+    Dezena: '' # Dezena
+    Centena: '' # Centena
+    Milhar: 'K' # Milhar
+    Milhão: 'M' #Milhão
+    Bilhão: 'B' #Bilhão
+    Trilhão: 'T' #Trilhão
+    Quadrilhão: 'Q' #Quadrilhão
+    Quintilhão: 'QQ' #Quintilhão
+    Sextilhão: 'S' #Sextilhão
+    Septilhão: 'SS' #Septilhão
+    Oitolhão: 'O' #Oitolhão
+    Nonilhão: 'N' #Nonilhão
+    Decilhão: 'D' #Decilhão
+
+
+chat-tag-settings:
+  top-1: #Inútil, Não apagar.
+    tag-prefix: "§a[1º]" #Inútil, Não apagar.
+  top-2:
+    tag-prefix: "§6[RICASSO]"
+  top-3:
+    tag-prefix: "§6[RICO]"
+
+aliases-list:
+  enviar:
+    - get
+  adicionar:
+    - add
+  remover:
+    - remove
+  setar:
+    - set
+  toggle:
+    - ativar
+  top:
+    - rank
+
+messages:
+  prefix: "§6§lECONOMY"
+  yourMoney: "§6%CoinMsg%: §f%coins%"
+  otherMoney: "§6%CoinMsg%: §f%coins%"
+  magnataSet: "%prefix% §aNovo Magnata: %tag% %player%"
+  setMoney: "%prefix% §aVocê setou §6%coins% §ade §f%player_send%§a!"
+  setedMoney: "%prefix% §aVocê teve §6%coins% §a%CoinMsg% setadas §f%player_send%§a!"
+  removeMoney: "%prefix% §aVocê removeu §6%coins% §ade §f%player_send%§a!"
+  removedMoney: "%prefix% §aVocê teve §6%coins% §a%CoinMsg% removidas §f%player_send%§a!"
+  sendMoney: "%prefix% §aVocê enviou §6%coins% §apara §f%player_send%§a!"
+  receiveMoney: "%prefix% §aVocê recebeu §6%coins% §ade §f%player_send%§a!"
+  noPermission: "§cVocê não tem permissão para isto!"
+  playerOffline: "§cO jogador desejado está offline!"
+  numberException: "§cPor favor, aplique um número válido!"
+  sendCheque: "%prefix% §aVocê criou um §fCheque §ano valor de §6%coins%§a!"
+  chequeUse: "%prefix% §aVocê coletou um §fCheque §ade §6%coins%§a!"
+  moreThanValue: "§cEste valor é maior que a carteira do jogador!"
+  dontSendForMe: "§cVocê não pode enviar coins para sí mesmo!"
+  playerHasUntoggle: "§cEste jogador desativou o recebimento de %CoinMsg%!"
+  incorrectUsage: "§cUso incorreto do comando!"
+  moreThanZero: "§cO valor deve ser maior que 0!"
+
+  notEnoughCoins: "§cSão necessárias pelo menos %coins% %CoinMsg% para isto!"
+  toggleActive: "§aVocê ativou o §6Recebimento de Coins§a!"
+  toggleDesactive: "§aVocê desativou o §6Recebimento de Coins§a!"
+  moneyTop: "§a[%position%] §f%tag% %player%: §e%coins% Coins§a!"
